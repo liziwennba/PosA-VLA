@@ -67,23 +67,23 @@
             <span class="author-block">
               Xin Wang</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="#">Hanlue Zhang</a><sup>1</sup>,</span>
+              Hanlue Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="#">Runnan Chen</a><sup>3</sup>,</span>
+              Runnan Chen</a><sup>3</sup>,</span>
             <span class="author-block">
-              <a href="#">Runqi Lin</a><sup>3</sup>,</span>
+              Runqi Lin</a><sup>3</sup>,</span>
             <span class="author-block">
-              <a href="#">Xiao He</a><sup>2</sup>,</span>
+              Xiao He</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="#">Han Huang</a><sup>2</sup>,</span>
+              Han Huang</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="#">Yandong Guo</a><sup>2</sup>,</span>
+              Yandong Guo</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="#">Fakhri Karray</a><sup>1</sup>,</span>
+              Fakhri Karray</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="#">Tongliang Liu</a><sup>1,3</sup>,</span>
+              Tongliang Liu</a><sup>1,3</sup>,</span>
             <span class="author-block">
-              <a href="#">Mingming Gong</a><sup>1,4</sup>,</span>
+              Mingming Gong</a><sup>1,4</sup>,</span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -137,9 +137,21 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            <b>Abstract:</b> We present PosA-VLA, a novel approach that enhances action generation in Vision-Language-Action models. 
-            By introducing Pose-Conditioned Anchor Attention, our model explicitly attends to critical pose information...
-            (Put your abstract here)
+            <b>Abstract:</b> The Vision-Language-Action (VLA) models have demonstrated remarkable performance on embodied tasks and
+                shown promising potential for real-world applications.
+                However, current VLAs fail to exhibit consistent and precise target-oriented actions, as they often generate redundant motions along trajectories, limiting their applicability in time-sensitive scenarios. In this work, we attribute
+                the redundant actions to the spatially uniform perception
+                field of VLAs, which leads them to be distracted by target-
+                irrelevant objects, particularly in complex environments. To
+                this end, we propose an efficient PosA-VLA framework,
+                which anchors visual attention via pose-conditioned supervision, consistently guiding the model's perception toward
+                task-relevant regions. The pose-conditioned anchor attention mechanism enables the model to better align instruc-
+                tion semantics with actionable visual cues, thereby enhancing action generation precision and efficiency. Moreover,
+                our framework is built upon a lightweight architecture and
+                requires no auxiliary perception modules (e.g., segmentation or grounding networks), ensuring efficient inference.
+                Extensive experiments verify that our method performs embodied tasks with precise and time-efficient execution across
+                diverse robotic manipulation benchmarks and shows robust
+                generalization in various environments.
           </p>
         </div>
       </div>
@@ -153,10 +165,10 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Methodology</h2>
-        <img src="./static/images/architecture.png" alt="Architecture" style="width:100%; border-radius:10px;">
+        <img src="./static/images/framework.png" alt="Architecture" style="width:100%; border-radius:10px;">
         <div class="content has-text-justified">
           <p>
-            Overview of the PosA-VLA architecture. We leverage anchor tokens to guide the attention mechanism...
+            Overview of the PosA-VLA architecture.
           </p>
         </div>
       </div>
