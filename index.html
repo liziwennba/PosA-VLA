@@ -88,8 +88,8 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>MBZUAI,</span>
-            <span class="author-block"><sup>2</sup>AI2Robotics</span>
-            <span class="author-block"><sup>2</sup>The University of Sydney</span>
+            <span class="author-block"><sup>2</sup>AI2Robotics,</span>
+            <span class="author-block"><sup>2</sup>The University of Sydney,</span>
             <span class="author-block"><sup>2</sup>The University of Melbourne</span>
           </div>
 
@@ -168,7 +168,12 @@
         <img src="./static/images/framework.png" alt="Architecture" style="width:100%; border-radius:10px;">
         <div class="content has-text-justified">
           <p>
-            Overview of the PosA-VLA architecture.
+            Overview of the PosA-VLA architecture. A CLIP text encoder extracts the textual feature, while a CLIP image
+            encoder produces patch-wise visual features from head and wrist cameras. These features are fused through a cross-attention module
+            to generate anchor attention weights, which are supervised by the proposed anchor loss using the ground-truth pose-conditioned anchor
+            maps. The anchor attention weights are then applied to DINOv2 image features via element-wise multiplication to obtain refined visual
+            representations. Finally, the refined visual features, together with the text feature and the robot state feature, are fed into the Flow Matching
+            Transformer (FMT) to predict the continuous action sequence.
           </p>
         </div>
       </div>
@@ -250,8 +255,10 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{posa_vla_2025,
-  author    = {Your Name and Co-authors},
+    <pre><code>@article{li2025posa,
+    author  = {Ziwen Li, Xin Wang, Hanlue Zhang, Runnan Chen, Runqi Lin, Xiao He,
+                Han Huang, Yandong Guo, Fakhri Karray, Tongliang Liu,
+                Mingming Gong},
   title     = {PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention},
   journal   = {arXiv preprint arXiv:2512.03724},
   year      = {2025},
@@ -259,16 +266,6 @@
 }</code></pre>
   </div>
 </section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-      </p>
-    </div>
-  </div>
-</footer>
 
 </body>
 </html>
