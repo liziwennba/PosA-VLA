@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention">
+  <meta name="keywords" content="Robotics, VLA, Manipulation, Transformer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention</title>
+
+  <!-- 引入 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <!-- 引入 CSS 框架 (Bulma) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    body { font-family: 'Noto Sans', sans-serif; }
+    .title.is-1 { font-family: 'Google Sans', sans-serif; font-weight: 700; }
+    .publication-title { font-size: 2.5rem; }
+    .publication-authors { font-size: 1.25rem; margin-top: 20px; }
+    .publication-links { margin-top: 30px; }
+    .button.is-dark { background-color: #363636; border-color: transparent; color: #fff; }
+    .hero-body { padding: 3rem 1.5rem; }
+    
+    /* 视频容器样式 */
+    .video-container {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    video { width: 100%; display: block; }
+    
+    /* 分类标题样式 */
+    .category-title {
+      border-bottom: 2px solid #f5f5f5;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      color: #4a4a4a;
+    }
+    
+    .caption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 头部：标题、作者、链接 -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention</h1>
+          
+          <!-- 作者 (请自行修改) -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Author Name 1</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Author Name 2</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Author Name 3</a><sup>2</sup>,</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University Name,</span>
+            <span class="author-block"><sup>2</sup>Lab Name</span>
+          </div>
+
+          <!-- 链接按钮 -->
+          <div class="publication-links">
+            <!-- Arxiv Link -->
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2512.03724" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper (arXiv)</span>
+              </a>
+            </span>
+            <!-- Code Link (占位) -->
+            <span class="link-block">
+              <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code (Coming Soon)</span>
+              </a>
+            </span>
+            <!-- Video Link -->
+            <span class="link-block">
+              <a href="#demo-videos" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-youtube"></i></span>
+                <span>Demo Videos</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Video: 最精彩的一个展示视频 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract & Performance</h2>
+        <div class="video-container">
+          <!-- 替换为你的 Teaser 视频 -->
+          <video poster="" id="teaser" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/teaser.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Abstract:</b> We present PosA-VLA, a novel approach that enhances action generation in Vision-Language-Action models. 
+            By introducing Pose-Conditioned Anchor Attention, our model explicitly attends to critical pose information...
+            (Put your abstract here)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 核心方法图示 (如果有图片) -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Methodology</h2>
+        <img src="./static/images/architecture.png" alt="Architecture" style="width:100%; border-radius:10px;">
+        <div class="content has-text-justified">
+          <p>
+            Overview of the PosA-VLA architecture. We leverage anchor tokens to guide the attention mechanism...
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 视频展示区：分类展示 -->
+<section class="section" id="demo-videos">
+  <div class="container is-max-desktop">
+    
+    <!-- 分类 1: Language Conditioned Tasks -->
+    <h2 class="title is-3 category-title">1. Language-Conditioned Manipulation</h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/task1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">"Pick up the red apple"</p>
+      </div>
+      <div class="column">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/task2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">"Open the drawer"</p>
+      </div>
+    </div>
+
+    <!-- 分类 2: Generalization -->
+    <h2 class="title is-3 category-title">2. Generalization to Unseen Objects</h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/gen1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Unseen mugs</p>
+      </div>
+      <div class="column">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/gen2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Distractor objects</p>
+      </div>
+      <div class="column">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/gen3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">New Backgrounds</p>
+      </div>
+    </div>
+
+    <!-- 分类 3: Long-Horizon Tasks -->
+    <h2 class="title is-3 category-title">3. Long-Horizon Tasks</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/long_horizon.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Full sequence: Making coffee / Setting table</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BibTeX 引用 -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{posa_vla_2025,
+  author    = {Your Name and Co-authors},
+  title     = {PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention},
+  journal   = {arXiv preprint arXiv:2512.03724},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2512.03724},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
