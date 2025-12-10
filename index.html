@@ -30,7 +30,7 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     video { width: 100%; display: block; }
     
@@ -38,15 +38,22 @@
     .category-title {
       border-bottom: 2px solid #f5f5f5;
       padding-bottom: 10px;
-      margin-bottom: 30px;
-      color: #4a4a4a;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #363636;
     }
     
     .caption {
-      font-size: 0.9em;
-      color: #666;
+      font-size: 0.95em;
+      color: #4a4a4a;
       margin-top: 5px;
       text-align: center;
+      font-weight: 500;
+    }
+    
+    /* 调整列间距 */
+    .columns.is-multiline {
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -60,56 +67,41 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention</h1>
           
-          <!-- 作者 (请自行修改) -->
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              Ziwen Li</a><sup>1</sup>,</span>
-            <span class="author-block">
-              Xin Wang</a><sup>2</sup>,</span>
-            <span class="author-block">
-              Hanlue Zhang</a><sup>1</sup>,</span>
-            <span class="author-block">
-              Runnan Chen</a><sup>3</sup>,</span>
-            <span class="author-block">
-              Runqi Lin</a><sup>3</sup>,</span>
-            <span class="author-block">
-              Xiao He</a><sup>2</sup>,</span>
-            <span class="author-block">
-              Han Huang</a><sup>2</sup>,</span>
-            <span class="author-block">
-              Yandong Guo</a><sup>2</sup>,</span>
-            <span class="author-block">
-              Fakhri Karray</a><sup>1</sup>,</span>
-            <span class="author-block">
-              Tongliang Liu</a><sup>1,3</sup>,</span>
-            <span class="author-block">
-              Mingming Gong</a><sup>1,4</sup>,</span>
+            <span class="author-block">Ziwen Li<sup>1</sup>,</span>
+            <span class="author-block">Xin Wang<sup>2</sup>,</span>
+            <span class="author-block">Hanlue Zhang<sup>1</sup>,</span>
+            <span class="author-block">Runnan Chen<sup>3</sup>,</span>
+            <span class="author-block">Runqi Lin<sup>3</sup>,</span>
+            <span class="author-block">Xiao He<sup>2</sup>,</span>
+            <span class="author-block">Han Huang<sup>2</sup>,</span>
+            <span class="author-block">Yandong Guo<sup>2</sup>,</span>
+            <span class="author-block">Fakhri Karray<sup>1</sup>,</span>
+            <span class="author-block">Tongliang Liu<sup>1,3</sup>,</span>
+            <span class="author-block">Mingming Gong<sup>1,4</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>MBZUAI,</span>
             <span class="author-block"><sup>2</sup>AI2Robotics,</span>
-            <span class="author-block"><sup>2</sup>The University of Sydney,</span>
-            <span class="author-block"><sup>2</sup>The University of Melbourne</span>
+            <span class="author-block"><sup>3</sup>The University of Sydney,</span>
+            <span class="author-block"><sup>4</sup>The University of Melbourne</span>
           </div>
 
           <!-- 链接按钮 -->
           <div class="publication-links">
-            <!-- Arxiv Link -->
             <span class="link-block">
               <a href="https://arxiv.org/abs/2512.03724" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>Paper (arXiv)</span>
               </a>
             </span>
-            <!-- Code Link (占位) -->
             <span class="link-block">
               <a href="#" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Code (Coming Soon)</span>
               </a>
             </span>
-            <!-- Video Link -->
             <span class="link-block">
               <a href="#demo-videos" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fab fa-youtube"></i></span>
@@ -123,35 +115,29 @@
   </div>
 </section>
 
-<!-- Teaser Video: 最精彩的一个展示视频 -->
+<!-- Abstract (已移除视频) -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract & Performance</h2>
-        <div class="video-container">
-          <!-- 替换为你的 Teaser 视频 -->
-          <video poster="" id="teaser" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/teaser.mp4" type="video/mp4">
-          </video>
-        </div>
+        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <b>Abstract:</b> The Vision-Language-Action (VLA) models have demonstrated remarkable performance on embodied tasks and
-                shown promising potential for real-world applications.
-                However, current VLAs fail to exhibit consistent and precise target-oriented actions, as they often generate redundant motions along trajectories, limiting their applicability in time-sensitive scenarios. In this work, we attribute
-                the redundant actions to the spatially uniform perception
-                field of VLAs, which leads them to be distracted by target-
-                irrelevant objects, particularly in complex environments. To
-                this end, we propose an efficient PosA-VLA framework,
-                which anchors visual attention via pose-conditioned supervision, consistently guiding the model's perception toward
-                task-relevant regions. The pose-conditioned anchor attention mechanism enables the model to better align instruc-
-                tion semantics with actionable visual cues, thereby enhancing action generation precision and efficiency. Moreover,
-                our framework is built upon a lightweight architecture and
-                requires no auxiliary perception modules (e.g., segmentation or grounding networks), ensuring efficient inference.
-                Extensive experiments verify that our method performs embodied tasks with precise and time-efficient execution across
-                diverse robotic manipulation benchmarks and shows robust
-                generalization in various environments.
+            The Vision-Language-Action (VLA) models have demonstrated remarkable performance on embodied tasks and
+            shown promising potential for real-world applications.
+            However, current VLAs fail to exhibit consistent and precise target-oriented actions, as they often generate redundant motions along trajectories, limiting their applicability in time-sensitive scenarios. In this work, we attribute
+            the redundant actions to the spatially uniform perception
+            field of VLAs, which leads them to be distracted by target-
+            irrelevant objects, particularly in complex environments. To
+            this end, we propose an efficient PosA-VLA framework,
+            which anchors visual attention via pose-conditioned supervision, consistently guiding the model's perception toward
+            task-relevant regions. The pose-conditioned anchor attention mechanism enables the model to better align instruc-
+            tion semantics with actionable visual cues, thereby enhancing action generation precision and efficiency. Moreover,
+            our framework is built upon a lightweight architecture and
+            requires no auxiliary perception modules (e.g., segmentation or grounding networks), ensuring efficient inference.
+            Extensive experiments verify that our method performs embodied tasks with precise and time-efficient execution across
+            diverse robotic manipulation benchmarks and shows robust
+            generalization in various environments.
           </p>
         </div>
       </div>
@@ -159,7 +145,7 @@
   </div>
 </section>
 
-<!-- 核心方法图示 (如果有图片) -->
+<!-- Methodology -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -181,70 +167,163 @@
   </div>
 </section>
 
-<!-- 视频展示区：分类展示 -->
+<!-- 视频展示区 -->
 <section class="section" id="demo-videos">
   <div class="container is-max-desktop">
     
-    <!-- 分类 1: Language Conditioned Tasks -->
-    <h2 class="title is-3 category-title">1. Language-Conditioned Manipulation</h2>
-    <div class="columns is-centered">
-      <div class="column">
+    <!-- 分类 1: Robustness & Generalization -->
+    <h2 class="title is-3 category-title">1. Robustness & Generalization Tests</h2>
+    <div class="columns is-multiline is-centered">
+      <!-- 视频 1.1: Basic Tissue -->
+      <div class="column is-one-third">
         <div class="video-container">
           <video autoplay controls muted loop playsinline>
-            <source src="./static/videos/task1.mp4" type="video/mp4">
+            <source src="./static/videos/basic_tissue.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="caption">"Pick up the red apple"</p>
+        <p class="caption">Basic: Pick up tissue</p>
       </div>
-      <div class="column">
+
+      <!-- 视频 1.2: Unseen Background Bottle -->
+      <div class="column is-one-third">
         <div class="video-container">
           <video autoplay controls muted loop playsinline>
-            <source src="./static/videos/task2.mp4" type="video/mp4">
+            <source src="./static/videos/unseen_bg_bottle.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="caption">"Open the drawer"</p>
+        <p class="caption">Unseen Background: Pick up bottle</p>
+      </div>
+
+      <!-- 视频 1.3: Unseen Light Banana -->
+      <div class="column is-one-third">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/unseen_light_banana.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Unseen Light: Pick up banana</p>
+      </div>
+
+      <!-- 视频 1.4: Distractor Bread -->
+      <div class="column is-one-third">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/distractor_bread.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Distractor: Pick up bread</p>
+      </div>
+
+      <!-- 视频 1.5: Unseen Object Carrot -->
+      <div class="column is-one-third">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/unseen_obj_carrot.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Unseen Object: Pick up carrot</p>
+      </div>
+
+      <!-- 视频 1.6: Attention Vis Bottle -->
+      <div class="column is-one-third">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/attn_vis_bottle.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Pick up bottle (Attention Vis)</p>
       </div>
     </div>
 
-    <!-- 分类 2: Generalization -->
-    <h2 class="title is-3 category-title">2. Generalization to Unseen Objects</h2>
-    <div class="columns is-centered">
-      <div class="column">
+
+    <!-- 分类 2: Spatial Reasoning & Instruction Following -->
+    <h2 class="title is-3 category-title">2. Spatial Reasoning & Instruction Following</h2>
+    <div class="columns is-multiline is-centered">
+      
+      <!-- 视频 2.1: Bread Left -->
+      <div class="column is-one-third">
         <div class="video-container">
           <video autoplay controls muted loop playsinline>
-            <source src="./static/videos/gen1.mp4" type="video/mp4">
+            <source src="./static/videos/bread_left.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="caption">Unseen mugs</p>
+        <p class="caption">Put bread to the left</p>
       </div>
-      <div class="column">
+
+      <!-- 视频 2.2: Bread Right -->
+      <div class="column is-one-third">
         <div class="video-container">
           <video autoplay controls muted loop playsinline>
-            <source src="./static/videos/gen2.mp4" type="video/mp4">
+            <source src="./static/videos/bread_right.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="caption">Distractor objects</p>
+        <p class="caption">Put bread to the right</p>
       </div>
-      <div class="column">
+
+      <!-- 视频 2.3: Bread Top (Attn) -->
+      <div class="column is-one-third">
         <div class="video-container">
           <video autoplay controls muted loop playsinline>
-            <source src="./static/videos/gen3.mp4" type="video/mp4">
+            <source src="./static/videos/bread_top_attn.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="caption">New Backgrounds</p>
+        <p class="caption">Put bread to the top (Attention Vis)</p>
+      </div>
+
+      <!-- 视频 2.4: Carrot Bottom -> Plate Left -->
+      <div class="column is-one-third">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/carrot_bot_plate_left.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Carrot (bottom) &rarr; Plate Left</p>
+      </div>
+
+      <!-- 视频 2.5: Carrot Top -> Plate Right -->
+      <div class="column is-one-third">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/carrot_top_plate_right.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Carrot (top) &rarr; Plate Right</p>
+      </div>
+
+      <!-- 视频 2.6: Carrot Bottom -> Plate Right (Attn) -->
+      <div class="column is-one-third">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/carrot_bot_plate_right_attn.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">Carrot (bottom) &rarr; Plate Right (Attn Vis)</p>
       </div>
     </div>
 
-    <!-- 分类 3: Long-Horizon Tasks -->
-    <h2 class="title is-3 category-title">3. Long-Horizon Tasks</h2>
+
+    <!-- 分类 3: Long-Horizon Tasks & Benchmark -->
+    <h2 class="title is-3 category-title">3. Long-Horizon Task & Benchmark Visualization</h2>
     <div class="columns is-centered">
-      <div class="column is-full-width">
+      
+      <!-- 视频 3.1: Long Task Towel -->
+      <div class="column is-half">
         <div class="video-container">
           <video autoplay controls muted loop playsinline>
-            <source src="./static/videos/long_horizon.mp4" type="video/mp4">
+            <source src="./static/videos/long_task_towel.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="caption">Full sequence: Making coffee / Setting table</p>
+        <p class="caption">Long-Horizon: Put towel into the box</p>
+      </div>
+
+      <!-- 视频 3.2: Libero Visualization -->
+      <div class="column is-half">
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/libero_vis.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption">LIBERO Benchmark Visualization</p>
       </div>
     </div>
 
@@ -256,9 +335,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{li2025posa,
-    author  = {Ziwen Li, Xin Wang, Hanlue Zhang, Runnan Chen, Runqi Lin, Xiao He,
-                Han Huang, Yandong Guo, Fakhri Karray, Tongliang Liu,
-                Mingming Gong},
+  author    = {Ziwen Li, Xin Wang, Hanlue Zhang, Runnan Chen, Runqi Lin, Xiao He, Han Huang, Yandong Guo, Fakhri Karray, Tongliang Liu, Mingming Gong},
   title     = {PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention},
   journal   = {arXiv preprint arXiv:2512.03724},
   year      = {2025},
@@ -266,6 +343,16 @@
 }</code></pre>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+      </p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
